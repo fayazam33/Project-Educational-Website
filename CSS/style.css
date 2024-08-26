@@ -903,10 +903,359 @@ section{
  }
 
 
-
-
 /* ...............Contact Page end..............*/
 
+
+
+/* ...............Playlist Page start......... */
+.playlist .row{
+    display: flex;
+    align-items: flex-end;
+    gap:1.5rem;
+    flex-wrap: wrap;
+    padding: 2rem;
+    padding-top: 1.5rem;
+    background-color: var(--white);
+}
+.playlist h1{
+    color: var(--black);
+    font-size: 2rem;
+    padding-bottom: 1rem;
+}
+.playlist hr{
+    gap:1rem;
+    margin-bottom: 1rem;
+}
+
+.playlist .row .col{
+    flex: 1 1 40rem;
+}
+
+.playlist .row .columns .thumb{
+    position: relative;
+    height: 30rem;
+   
+}
+
+.playlist .row .columns .thumb img{
+    width:100%;
+    height: 100%;
+    border-radius:0.5rem;
+    object-fit:cover;
+}
+.playlist .row .columns .thumb span{
+    position:absolute;
+    top:  26rem;
+    left:49rem;
+    border-radius: 0.5rem;
+    padding: .5rem 1.5rem;
+    font-size: 2rem;
+    color:white;
+    background-color: rgba(0, 0, 0, 0.877);
+}
+
+
+.playlist .row .col .tutor{
+    display:flex;
+    align-items: center;
+    gap:1.7rem;
+    
+}
+
+.playlist .row .col .tutor img{
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
+    object-fit:cover;
+}
+.playlist .row .col .tutor h3{
+    font-size: 2rem;
+    color:var(--black);
+    margin-bottom: 0.5rem;
+}
+.playlist .row .col .tutor span{
+    color:var(--littleblack);
+    font-size: 1.7rem;
+}
+.playlist .row .col .details{
+    padding-top: 2rem;
+}
+.playlist .row .col .details h3{
+    font-size: 2rem;
+    color:var(--black);
+}
+.playlist .row .col .details p{
+    padding: 1rem 0 ;
+    line-height: 1.5 ;
+    font-size: 1.8rem;
+    color:var(--littleblack);
+    text-align: justify;
+}
+.playlist .row .col .details .date{
+    font-size:1.6rem;
+}
+.playlist .row .col .details .date i{
+   color: var(--main-color); 
+   margin-bottom: .5rem;
+}
+.playlist .row .col .details .date span{
+    color: var(--littleblack);
+    margin-bottom: .5rem;
+}
+/* video section */
+
+.video-container .box-container{
+    display:grid;
+    grid-template-columns: repeat(auto-fit , minmax(30rem , 1fr));
+    gap:1.5rem;
+    align-items: flex-start;
+    justify-content: center;
+}
+.video-container .box-container .box{
+    position:relative;
+    border-radius: .5rem;
+    padding: 2rem;
+    background-color: var(--white);
+}
+.video-container .box-container .box:hover{
+box-shadow: 0 0 15px rgba(0, 123, 255, 0.75); 
+}
+.video-container .box-container .box img{
+    height: 20rem;
+    width: 100%;
+    border-radius: .5rem;
+    object-fit:fill;
+}
+
+.video-container .box-container .box i{
+    position:absolute;
+    top:2rem; left:2rem; right:2rem ;
+    background-color: rgba(0, 0, 0, 0.4);
+    height: 20rem;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    border-radius: .5rem; 
+    color:white;
+    
+    display: none;
+}
+.video-container .box-container .box:hover i{
+   display: flex;
+}
+.video-container .box-container .box h3{
+    font-size: 1.7rem;
+    color:var(--black);
+    margin-top: 1rem;
+}
+.video-container .box-container .box:hover h3{
+    color: #f53b57;
+}
+.video-container .heading{
+    color: var(--black);
+    font-size: 2rem;
+    padding-bottom: 1rem;
+   
+}
+
+
+/* ...............Playlist Page end........... */
+
+
+
+/* ...............Watch Video Section starts.......... */
+.watch-video .video-details{
+    background-color: var(--white);
+    padding: 2rem;
+}
+.watch-video .video-details iframe{
+    width:100%;
+    height: 600px;
+    border-radius: .5rem;
+    margin-bottom: .5rem;
+}
+.watch-video .video-details .title{
+    font-size: 2rem;
+    color:var(--black);
+    padding:1rem 0;
+}
+.watch-video .video-details .info{
+    display: flex;
+    gap:2rem;
+    margin-bottom: .5rem;
+    padding-bottom: .5rem;
+    
+}
+.watch-video .video-details .info p{
+    font-size:1.8rem;
+}
+.watch-video .video-details .info p i{
+    margin-right: 1rem;
+    color:#f53b57;
+}
+.watch-video .video-details .info p span{
+    color:var(--light-color);
+    font-weight: bold;
+}
+.watch-video .video-details .tutor{
+    padding:2rem 0;
+    display:flex;
+    align-items: center;
+    gap:2rem;
+}
+.watch-video .video-details .tutor img{
+    height: 7rem;
+    width: 7rem;
+    border-radius: .5rem;
+    object-fit: cover;
+}
+
+.watch-video .video-details .tutor h3{
+    font-size: 2rem;
+    color:var(--black);
+    margin-bottom: .2rem; 
+}
+
+.watch-video .video-details .tutor span{
+    color:var(--littleblack);
+    font-size: 1.8rem;
+}
+.watch-video .video-details .flex{
+    display: flex;
+    align-items: center;
+    gap:1rem;
+    justify-content: space-between;
+}
+.watch-video .video-details .flex a{
+    margin-top: 0;
+}
+.watch-video .video-details .flex button{
+    background-color:var(--white);
+    cursor: pointer;
+    padding: 1rem 3rem;
+    font-size: 2rem;
+    border-radius: .5rem;
+    border-radius: .5rem;
+    border-width: 3px;      
+    border-color: var(--black);     
+    border-style: solid; 
+}
+
+.watch-video .video-details .flex button i{
+    
+    color: #f53b57;
+    /* margin-right: auto; */
+}
+.watch-video .video-details .flex button span{
+    color:var(--black);
+    font-size: 2rem;
+    font-weight: bold;
+}
+.watch-video .video-details .flex button:hover{
+    background-color: var(--littleblack);
+}
+.watch-video .video-details .flex button:hover i{
+    color: var(--main-color);
+}
+.watch-video .video-details .flex button:hover span{
+    color:var(--white);
+}
+.watch-video .video-details .description{
+    padding-top: 1rem;
+
+}
+.watch-video .video-details .description p{
+    line-height: 1.5;
+    font-size: 1.9rem;
+    color: var(--light-color);
+    /* white-space: pre-line; */
+    text-align: justify;
+}
+
+
+/* ...............Watch Video Section Ends............ */
+
+
+/* ...............Comment Section Start............... */
+
+.comments .heading{
+    font-size: 2rem;
+    color:var(--black);
+    padding:1rem 0;
+}
+.comments .add-comment{
+     background-color: var(--white);
+     border-radius: .5rem;
+     margin-bottom: 2rem;
+     padding: 2rem;
+}
+.comments .add-comment textarea{
+    border-radius: .5rem;
+    padding: 1.4rem;
+    width:100%;
+    height:20rem;
+    background-color: var(--light-bg);
+    resize:none;
+    font-size: 2rem;
+    color:var(--black);
+}
+.comments h1{
+    font-size: 2rem;
+    color:var(--black);
+    padding:1rem 0;
+}
+.comments .show-comments{
+    background-color: var(--white);
+    border-radius: .5rem;
+    padding: 2rem;
+    display: grid;
+    gap:2rem;
+    margin-top: 1rem;
+
+}
+.comments .show-comments .user{
+    display:flex;
+    align-items: center;
+    gap:1.5rem;
+    margin-bottom: 2rem;
+    
+}
+.comments .show-comments .user img{
+    height:5rem;
+    width:5rem;
+    border-radius: 50%;
+    object-fit: cover;
+    background: none;
+}
+.comments .show-comments .user h3{
+    font-size: 2rem;
+    color:var(--black);
+    margin-bottom: .2rem;
+}
+.comments .show-comments .user span{
+    color:var(--littleblack);
+    font-size: 1.5rem;
+}
+.comments .show-comments .text{
+    border-radius: .5rem;
+    background-color: var(--light-bg);
+    padding:1rem 1.5rem;
+    color:var(--black);
+    margin:.5rem 0;
+    position:relative;
+    text-align: justify;
+    font-size: 2rem;
+}
+
+
+
+
+
+
+
+
+/* ...............Comment Section End */
 
 
 
@@ -921,7 +1270,7 @@ section{
     margin-top:3rem;
     bottom:0 ; right:0 ; left:0;
     background-color: rgb(255, 255, 255);
-    padding: 1rem 1rem;
+    padding: .1rem .1rem;
     text-align:center;
     color:black;
     font-size:1.8rem;
@@ -998,6 +1347,17 @@ section{
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
    }
 
+   .playlist .row .columns .thumb{
+    width:auto;
+    height: auto;
+    object-fit: fill;
+   }
+
+   .playlist .row .columns .thumb span{
+    top:auto;
+    left:auto;
+   }
+
    
 }
 @media (max-width: 450px){
@@ -1010,6 +1370,19 @@ section{
     }
     .contact .row form{
         width:auto;
-    
     }
+    .playlist .row .columns .thumb {
+        width:auto;
+        height: auto;
+        object-fit: fill;
+    }
+    .playlist .row .col .tutor{
+        padding-top:2rem;
+    }
+    .playlist .row .columns .thumb span{
+        top:auto;
+        left:auto;
+    }
+    
 }
+/* .playlist .row .columns .thumb span */
