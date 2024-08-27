@@ -315,7 +315,7 @@ section{
 .sidebar .profile span{
     font-size:1.5rem;
     font-weight:bolder;
-    color:rgb(51, 50, 50);
+    color:var(--black);
 }
  .sidebar .navbar{
     margin-top:1rem;
@@ -1251,13 +1251,28 @@ box-shadow: 0 0 15px rgba(0, 123, 255, 0.75);
 
 
 
+/* ...............Comment Section End............ */
 
+/* ...............Admmin Page Start.............. */
+.form-container form h3{
+    color: #f53b57;
+    font-size: 3rem ;
+    margin-bottom: 3rem;
+    margin-top: 1rem;
+}
+.form-container form{
+    background-color: var(--white);
+    /* border: 3px solid var(--black); */
+}
 
-
-
-/* ...............Comment Section End */
-
-
+.form-container form .box{
+   background-color:var(--light-bg);
+   color: var(--black);
+   font-weight: 500;
+   resize: none;
+   /* border: .1px solid var(--black); */
+}
+/* ...............Admin Page End................. */
 
 
 
