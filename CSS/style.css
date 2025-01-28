@@ -4,7 +4,7 @@
     --red:#e94a4a;
     --orange:#d35400;
     --white:#ffffff;
-    --black: rgb(34, 33, 33);
+    --black: #213555;
     --littleblack:rgb(59, 58, 58);
     --littlewhite:white;
     --light-color:#494141;
@@ -266,6 +266,7 @@ section{
     width:30rem;
     background-color: var(--white);
     border-right: var(--border) ;
+    overflow-y: scroll;
     z-index: 1200;
     /* transition: 0.2s linear; */
 
@@ -350,6 +351,20 @@ section{
 .sidebar .navbar a:hover i{
     margin-right: 3.5rem;
    
+}
+
+.dropdown-container{
+    transition: 2s linear;
+}
+
+.dropdown-content{
+    display: none;
+}
+
+.dropdown-container:hover .dropdown-content{
+    transition: 2s linear;
+    display:contents;
+
 }
 
 /* sidebar active */
@@ -575,6 +590,13 @@ section{
    color:  purple;   
   }
 
+  .btn-container{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
 /* profile page end  */
 
 
@@ -756,6 +778,10 @@ section{
     border-radius:.5rem;
     background-color: var(--white);
     padding:3rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
 }
 .courses .box-container .box:hover{
@@ -910,9 +936,8 @@ section{
 /* ...............Playlist Page start......... */
 .playlist .row{
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     gap:1.5rem;
-    flex-wrap: wrap;
     padding: 2rem;
     padding-top: 1.5rem;
     background-color: var(--white);
@@ -938,15 +963,15 @@ section{
 }
 
 .playlist .row .columns .thumb img{
-    width:100%;
+    max-width:100%;
     height: 100%;
     border-radius:0.5rem;
-    object-fit:cover;
+    /* object-fit:cover; */
 }
 .playlist .row .columns .thumb span{
     position:absolute;
-    top:  26rem;
-    left:49rem;
+    bottom:  0px;
+    right: 0px;
     border-radius: 0.5rem;
     padding: .5rem 1.5rem;
     font-size: 2rem;
@@ -1247,10 +1272,6 @@ box-shadow: 0 0 15px rgba(0, 123, 255, 0.75);
     text-align: justify;
     font-size: 2rem;
 }
-
-
-
-
 /* ...............Comment Section End............ */
 
 /* ...............Admmin Page Start.............. */
@@ -1264,7 +1285,6 @@ box-shadow: 0 0 15px rgba(0, 123, 255, 0.75);
     background-color: var(--white);
     /* border: 3px solid var(--black); */
 }
-
 .form-container form .box{
    background-color:var(--light-bg);
    color: var(--black);
@@ -1273,12 +1293,6 @@ box-shadow: 0 0 15px rgba(0, 123, 255, 0.75);
    /* border: .1px solid var(--black); */
 }
 /* ...............Admin Page End................. */
-
-
-
-
-
-
 /* footer */
 .footer{
     position:relative;
@@ -1291,7 +1305,195 @@ box-shadow: 0 0 15px rgba(0, 123, 255, 0.75);
     font-size:1.8rem;
 }
 
+.courses .box-container .box .button-group{
+    display: flex; 
+    justify-content: center; 
+    gap: .5rem; 
+    margin-top: .1rem;
+ }
 
+
+
+/*..............show review section shuru.......*/
+.review-view {
+    padding: 2rem;
+    background-color: var(--light-bg);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem; 
+}
+
+.review-box {
+    background-color: var(--white);
+    border-radius: 0.5rem;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); 
+    padding: 2rem;
+    transition: transform 0.3s ease;
+}
+
+.review-box:hover {
+    transform: translateY(-5px); 
+}
+
+.review-header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem; 
+}
+
+.student-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%; 
+    object-fit: cover; 
+    border: 2px solid var(--blue);
+}
+
+.review-info h3 {
+    font-size: 2rem;
+    margin: 0;
+    color: var(--black);
+}
+
+.review-info p {
+    font-size: 1.9rem;
+    font-weight: bolder;
+    color: var(--black);
+}
+
+.rating {
+    font-weight: bold;
+    color: var(--red);
+}
+
+hr {
+    border:#d63031;
+    border-top: 2px solid var(--red); 
+    margin: 1.5rem 0;
+}
+
+.review-text {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--black);
+    line-height: 1.5;
+}
+
+/*..............show review section shesh.......*/
+
+
+
+/*.................review page start............*/
+/* Review Section */
+
+.review .row {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 3rem;
+    flex-wrap: wrap;
+}
+
+.review .row .image {
+    flex: 1 1 50rem;
+}
+
+.review .row .image img {
+    width: 100%;
+    height: 50rem;
+    border-radius: 0.5rem;
+    object-fit: cover;
+}
+
+.review .row form {
+    flex: 1 1 30rem;
+    background-color: var(--white);
+    border-radius: 0.5rem;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(84, 139, 197, 0.1); 
+}
+
+.review .row form h3 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--black);
+}
+
+.review .row form .box {
+    width: 100%;
+    margin: 1rem 0;
+    border-radius: 0.5rem;
+    background-color: var(--light-bg);
+    padding: 1.5rem;
+    color: var(--black);
+    font-size: 2rem;
+}
+
+.review .row form textarea {
+    height: 20rem;
+    resize: none;
+}
+
+.review .row form .rating-label {
+    display: block;
+    margin: 1rem 0 0.5rem;
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--black);
+    text-align: left;
+}
+
+.review .row form .rating-dropdown {
+    width: 100%;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    background-color: var(--light-bg);
+    font-size: 2rem;
+    color: var(--red);
+    border: 1px solid #ccc;
+    margin-bottom: 1rem;
+    appearance: none; 
+    cursor: pointer;
+}
+
+.review .row form .rating-dropdown:focus {
+    outline: 2px solid var(--red); 
+}
+
+/*.................Review page end..............*/
+
+
+
+/* Error */
+.error{
+    background-color: #fe0000;
+    color: #ffffff;
+    font-size: x-large;
+    text-align: center;
+    width: 70%;
+    transition: 1s linear;
+    margin: auto;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.success{
+    background-color: #038d4c;
+    color: rgb(241, 237, 237);
+    font-size: x-large;
+    text-align: center;
+    width: 70%;
+    transition: 1s linear;
+    margin: auto;
+    padding: 10px;
+    border-radius: 10px;
+}
 
 /* responsive portion */
 /* @media screen and (max-width:420px){  
@@ -1306,7 +1508,6 @@ box-shadow: 0 0 15px rgba(0, 123, 255, 0.75);
 @media(max-width:1500px){
     body{
         padding-left: 0;
-
     }
     .sidebar{
         transition:.2s linear;
@@ -1316,22 +1517,15 @@ box-shadow: 0 0 15px rgba(0, 123, 255, 0.75);
         left:0;
         box-shadow: 0 0 0 100vw rgba(0,0,0,.7);
     }
-
     .sidebar .closesidebar{
         display: block;
     }
 }
-
-
-
 @media (max-width: 991px){
-
     html{
         font-size:55%;
     }
-
 }
-
 @media (max-width:864px){
     .form-container form .Account{
         font-size: 1.8rem;
@@ -1340,9 +1534,7 @@ box-shadow: 0 0 15px rgba(0, 123, 255, 0.75);
         margin-left: auto;
     }
 }
-
 @media (max-width: 768px){
-
    #search-btn{
     display :inline-block;
    }
@@ -1361,22 +1553,17 @@ box-shadow: 0 0 15px rgba(0, 123, 255, 0.75);
    .header .flex .search-form.active{
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
    }
-
    .playlist .row .columns .thumb{
     width:auto;
     height: auto;
     object-fit: fill;
    }
-
    .playlist .row .columns .thumb span{
     top:auto;
     left:auto;
    }
-
-   
 }
 @media (max-width: 450px){
-
     html{
         font-size:50%;
     }
@@ -1397,7 +1584,6 @@ box-shadow: 0 0 15px rgba(0, 123, 255, 0.75);
     .playlist .row .columns .thumb span{
         top:auto;
         left:auto;
-    }
-    
+    } 
 }
 /* .playlist .row .columns .thumb span */
